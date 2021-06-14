@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<style>
+
+</style>
+
+<html>
+
+<a href="/website/index.html">Home</a>
+
+<a href="/website/puzzle.html">Puzzle</a>
+
+<hr>
+
+<center>
+    <h1>
+        I have randomly selected 2 numbers:
+
+        <br>
+
+        <script>
+            let random1 = Math.floor(Math.random() * 20)
+            let random2 = Math.floor(Math.random() * 20)
+            document.write(random1 + " and " + random2)
+        </script>
+
+        <br>
+        <br>
+
+        <script>
+            document.write("Please enter what " + random1 + " + " + random2 + " equals.")
+        </script>
+    </h1>
+
+    <label for="answer">Input Answer:</label>
+    <input type="text" id="answer" name="answer">
+
+    <button onclick="checkAnswer()">
+        Check answer
+    </button>
+
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById("answer").value;
+            if (answer == random1 + random2) {
+                document.writeln("Your answer is correct!");
+            }
+            else {
+                document.writeln("Your answer is not correct! >:)");
+            }
+        }
+    </script>
+
+</center>
+
+</html>
