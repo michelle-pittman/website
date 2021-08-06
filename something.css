@@ -1,0 +1,14 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottomborder{
+    border-bottom: 1px solid black;
+}
+.padding{
+    padding: 15px;
+}
+.margin{
+    margin-bottom: 50px;
+}
