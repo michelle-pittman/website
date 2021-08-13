@@ -3,21 +3,6 @@
 <html>
 
 <head>
-    <script>
-        let random1 = Math.floor(Math.random() * 20)
-        let random2 = Math.floor(Math.random() * 20)
-
-        function checkAnswer() {
-            let answer = document.getElementById("answer").value;
-            if (answer == random1 + random2) {
-                document.write("Your answer is correct!");
-            }
-            else {
-                document.write("Your answer is not correct! >:)");
-            }
-        }
-    </script>
-
     <link rel="stylesheet" href="something.css">
 </head>
 
@@ -26,18 +11,12 @@
         <a href="/website/index.html">Home</a>
         <a href="/website/puzzle.html">Puzzle</a>
     </div>
-    
-    <script>
-        document.write("I have randomly selected 2 numbers: " + random1 + " and " + random2)
-    </script>
 
-    <br>
+    <p id="selectNumbers"></p>
 
-    <script>
-        document.write("Please enter what " + random1 + " + " + random2 + " equals.")
-    </script>
+    <p id="enterNumber"></p>
 
-    <br>
+    <p id="yourAnswer"></p>
 
     <!-- answer box -->
     <input type="text" id="answer" name="answer">
@@ -46,6 +25,25 @@
     <button onclick="checkAnswer()">
         Check answer
     </button>
+
+    <script>
+
+        let random1 = Math.floor(Math.random() * 20)
+        let random2 = Math.floor(Math.random() * 20)
+
+        document.getElementById("selectNumbers").textContent = ("I have randomly selected 2 numbers: " + random1 + " and " + random2)
+        document.getElementById("enterNumber").textContent =("Please enter what " + random1 + " + " + random2 + " equals.")
+
+        function checkAnswer() {
+                let answer = document.getElementById("answer").value;
+                if (answer == random1 + random2) {
+                    document.getElementById("yourAnswer").textContent =("Your answer is correct!");
+                }
+                else {
+                    document.getElementById("yourAnswer").textContent =("Your answer is not correct! >:)");
+                }
+            }
+    </script>
 </body>
 
 </html>
